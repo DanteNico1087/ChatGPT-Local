@@ -1,0 +1,97 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: rgba(225, 218, 218, 0.765);
+    display: grid;
+    place-content: center;
+    height: 90vh;
+    height: 90dvh;
+}
+
+main {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 8px;
+    border-radius: 10px;
+    margin-bottom: 16px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    /* max-height: 400px; */
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    margin: 4px 0;
+    padding: 4px 8px;
+
+    span {
+        width: 36px;
+        height: 36px;
+        font-size: 12px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100%;
+    }
+
+    p {
+        padding: 4px 8px;
+        border-radius: 4px;
+        margin-top: 7px;
+    }
+
+    &.user {
+        align-items: flex-end;
+        align-self: flex-end;
+        span, p {
+            background: rgb(145, 223, 177);
+        }
+    }
+
+    &.bot {
+        align-self: flex-start;
+        span, p {
+            background: rgb(228, 159, 159);
+        }
+    }
+}
+
+form {
+    display: flex;
+
+    input {
+        flex-grow: 1;
+        margin-right: 8px;
+        padding: 4px 8px;
+        border: none;
+        border-radius: 4px;
+        height: 40px;
+    }
+
+    button {
+        padding: 4px 8px;
+        border: none;
+        border-radius: 4px;
+        background: rgb(220, 107, 14);
+        color: white;
+        cursor: pointer;
+
+        &[disabled] {
+            background: #ccc;
+            cursor: not-allowed;
+            opacity: .6;
+        }
+
+        &:hover {
+            background: rgb(210, 100, 14);
+        }
+    }	
+}
+
